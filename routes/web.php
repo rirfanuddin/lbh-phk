@@ -17,6 +17,14 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home')->middleware('user');
+Route::get('/home', 'UserController@index')->name('home')->middleware('user');
 
-Route::get('admin/home', 'AdminController@index')->middleware('admin');
+Route::group(['prefix' => '/', 'middleware' => 'user'], function(){
+    Route::get('home', 'UserController@home')->name('user.home');
+});
+
+Route::group(['prefix' => 'admin', 'middleware' => 'admin'], function(){
+    Route::get('home', 'AdminController@home')->name('admin.home');
+    Route::get('message', 'AdminController@listOfMessage')->name('admin.list.of.message');
+    Route::get('chat/with', 'AdminController@chatWith')->name('admin.chat.with');
+});

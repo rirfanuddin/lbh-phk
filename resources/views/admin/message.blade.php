@@ -4,84 +4,33 @@
     <div class="row page-tilte align-items-center">
         <div class="col-md-auto">
             <a href="#" class="mt-3 d-md-none float-right toggle-controls"><span class="material-icons">keyboard_arrow_down</span></a>
-            <h1 class="weight-300 h3 title">eCommerce Dashboard</h1>
-            <p class="text-muted m-0 desc">Get a quick overview of eCommerce</p>
+            <h1 class="weight-300 h3 title">Data Table With Controls </h1>
+            <p class="text-muted m-0 desc">All controls are functional</p>
+        </div>
+        <div class="col controls-wrapper mt-3 mt-md-0 d-none d-md-block ">
+            <div class="controls d-flex justify-content-center justify-content-md-end">
+                <input type="search" class="form-control d-inline-block" placeholder="Search in tabel...">
+                <span class="dropdown">
+                    <button type="button" id="downloadGrid" data-toggle="dropdown" class="btn btn-secondary py-1 px-2" ><span class="material-icons align-text-bottom">save_alt</span></button>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="downloadGrid">
+                      <a class="dropdown-item" href="#">Save as PDF</a>
+                      <a class="dropdown-item" href="#">Save as Image</a>
+                      <a class="dropdown-item" href="#">Save as Word</a>
+                      <div class="dropdown-divider"></div>
+                      <a class="dropdown-item" href="#">Export Excel</a>
+                    </div>
+                    </span>
+                <button type="button" class="btn btn-secondary py-1 px-2" data-toggle="modal" data-target="#gridFilters" ><span class="material-icons align-text-bottom">filter_list</span></button>
+                <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#addGrid" >Add Somthing</button>
+            </div>
         </div>
     </div>
 
+
     <div class="content">
-        <div class="card mb-4">
-            <div class="card-body  p-lg-4">
-                <div class="row">
-                    <div class="col-md-6 col-lg-3  mb-4 mb-lg-0">
-                        <div class="media align-items-center">
-                            <span class="material-icons text-info mr-4 circle p-3 border border-info bg-info-light25">shopping_cart</span>
-                            <div class="media-body">
-                                <h4 class="weight-400 m-0">4982</h4>
-                                <small class="text-muted">Order Recevied</small>
-                            </div>
-                        </div>
-                        <div class="progress mt-3" style="height: 6px;">
-                            <div class="progress-bar bg-info" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-6 col-lg-3  mb-4 mb-lg-0">
-                        <div class="media align-items-center">
-                            <span class="material-icons text-danger mr-3 circle p-3 border border-danger bg-danger-light25">monetization_on</span>
-                            <div class="media-body">
-                                <h4 class="weight-400 m-0">$23,470.00</h4>
-                                <small class="text-muted">Total Earnings</small>
-                            </div>
-                        </div>
-                        <div class="progress mt-3" style="height: 6px;">
-                            <div class="progress-bar bg-danger" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-6 col-lg-3  mb-4 mb-md-0 ">
-                        <div class="media align-items-center">
-                            <span class="material-icons text-success mr-3 circle p-3 border border-success bg-success-light25">person_add</span>
-                            <div class="media-body">
-                                <h4 class="weight-400 m-0">619</h4>
-                                <small class="text-muted">New Customers</small>
-                            </div>
-                        </div>
-                        <div class="progress mt-3" style="height: 6px;">
-                            <div class="progress-bar bg-success" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-6 col-lg-3 mb-4 mb-md-0">
-                        <div class="media align-items-center">
-                            <span class="material-icons text-warning mr-3 circle p-3 border border-warning bg-warning-light25">group</span>
-                            <div class="media-body">
-                                <h4 class="weight-400 m-0">395</h4>
-                                <small class="text-muted">Churned Users</small>
-                            </div>
-                        </div>
-                        <div class="progress mt-3" style="height: 6px;">
-                            <div class="progress-bar bg-warning" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-
         <div class="row">
-            <div class="col-lg-4 mb-4 mb-lg-0 ">
-                <div class="card h-75 ">
-                    <div class="card-header">Order Status</div>
-                    <div class="card-body">
-                        <h3 class="weight-400 text-center mb-0"><span class="material-icons mr-2 text-success">arrow_upward</span>73,239</h3>
-                        <p class="text-muted text-center">Lorem ipsum dolor sit amet</p>
-                        <canvas id="chart-area" height="220"></canvas>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-8">
-                <div class="card h-75">
+            <div class="col-lg-12">
+                <div class="card">
                     <div class="card-body table-responsive p-0">
                         <table class="table  m-0">
                             <thead>
@@ -197,4 +146,28 @@
 
 
     </div>
+
+
+    <nav aria-label="Page navigation example">
+        <form class="form-inline float-left">
+            <label class="my-1 mr-2 d-none d-md-block" for="show-data">Showing 10 out of 478</label>
+            <select class="form-control" id="show-data">
+                <option selected>25</option>
+                <option value="1">50</option>
+                <option value="2">100</option>
+                <option value="3">all</option>
+            </select>
+        </form>
+        <ul class="pagination mt-3 justify-content-end">
+            <li class="page-item">
+                <a class="page-link" href="#" tabindex="-1">Previous</a>
+            </li>
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item active"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item">
+                <a class="page-link" href="#">Next</a>
+            </li>
+        </ul>
+    </nav>
 @endsection
