@@ -23,6 +23,14 @@ class UserController extends Controller
      */
     public function home()
     {
-        return view('home');
+        return view('user.home');
+    }
+
+    public function message(){
+        return view('user.message');
+    }
+
+    public function profilEdit(){
+        return view('user.profiledit');
     }
 }

@@ -21,6 +21,8 @@ Route::get('/home', 'UserController@index')->name('home')->middleware('user');
 
 Route::group(['prefix' => '/', 'middleware' => 'user'], function(){
     Route::get('home', 'UserController@home')->name('user.home');
+    Route::get('message', 'UserController@message')->name('user.message');
+    Route::get('profil/edit', 'UserController@profilEdit')->name('user.edit');
 });
 
 Route::group(['prefix' => 'admin', 'middleware' => 'admin'], function(){

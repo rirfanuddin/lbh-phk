@@ -22,7 +22,7 @@
     <!-- Full Calendar Icons -->
     <link href="{{ url('css/panel/fullcalendar/fullcalendar.css')}}" rel="stylesheet">
 
-    <title>Admin LBH Payung Hitam Keadilan</title>
+    <title>User LBH Payung Hitam Keadilan</title>
 
 </head>
 
@@ -53,24 +53,20 @@
     <!-- SIDEBAR -->
     <aside class="sidebar">
         <nav class="navbar navbar-dark bg-primary">
-            <a class="navbar-brand m-0 py-2 brand-title" href="#">Admin LBH</a>
+            <a class="navbar-brand m-0 py-2 brand-title" href="#">User</a>
             <span></span>
             <a class="navbar-brand py-2 material-icons toggle-sidebar" href="#">menu</a>
         </nav>
 
         <nav class="navigation">
             <ul>
-                <li class="{{ Request::is('admin/home') ? 'active' : '' }}"><a href="{{url('/admin/home')}}" title="Dashboard"><span
+                <li class="{{ Request::is('home') ? 'active' : '' }}"><a href="{{url('home')}}" title="Dashboard"><span
                             class="nav-icon material-icons">public</span> Home</a></li>
-                <li class="{{ Request::is('admin/message') ? 'active' : '' }}" title="Theme Settings"><a href="{{url('/admin/message')}}"><span class="nav-icon material-icons ">color_lens</span>
+                <li class="{{ Request::is('message') ? 'active' : '' }}" title="Chat to Admin"><a href="{{url('message')}}"><span class="nav-icon material-icons ">color_lens</span>
                         List Message </a>
                 </li>
-                <li class="{{ Request::is('admin/chat/with') ? 'active' : '' }}"><a href="{{url('/admin/chat/with')}}" title="Layout Options"><span class="nav-icon material-icons">dashboard</span> Chat<span class="toogle-sub-nav material-icons">keyboard_arrow_right</span></a>
-                    <ul class="sub-nav">
-                        <li><a href="{{url('/admin/chat/with')}}" title="Top Navigation">Kemal</a></li>
-                        <li><a href="{{url('/admin/chat/with')}}" title="Fixed Layout">Muhammad</a></li>
-                        <li><a href="{{url('/admin/chat/with')}}" title="Compact Menu">Galang</a></li>
-                    </ul>
+                <li class="{{ Request::is('profil/edit') ? 'active' : '' }}" title="Edit Profil"><a href="{{url('profil/edit')}}"><span class="nav-icon material-icons ">color_lens</span>
+                        Edit Profil </a>
                 </li>
             </ul>
         </nav>
