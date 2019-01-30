@@ -27,6 +27,11 @@ Route::group(['prefix' => '/', 'middleware' => 'user'], function(){
 
 Route::group(['prefix' => 'admin', 'middleware' => 'admin'], function(){
     Route::get('home', 'AdminController@home')->name('admin.home');
-    Route::get('message', 'AdminController@listOfMessage')->name('admin.list.of.message');
-    Route::get('chat/with', 'AdminController@chatWith')->name('admin.chat.with');
+
+    Route::get('user', 'AdminController@getListUser')->name('admin.user');
+    Route::post('user', 'AdminController@getListUserByPerPage')->name('admin.user.changeshowperpage');
+    Route::get('user/{page}', 'AdminController@getListUserByPage')->name('admin.user.nextpage');
+
+    Route::get('message', 'AdminController@message')->name('admin.message');
+    Route::get('chat/{id}', 'AdminController@chatWith')->name('admin.chat');
 });

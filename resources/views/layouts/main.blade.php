@@ -61,16 +61,12 @@
         <nav class="navigation">
             <ul>
                 <li class="{{ Request::is('admin/home') ? 'active' : '' }}"><a href="{{url('/admin/home')}}" title="Dashboard"><span
-                            class="nav-icon material-icons">public</span> Home</a></li>
-                <li class="{{ Request::is('admin/message') ? 'active' : '' }}" title="Theme Settings"><a href="{{url('/admin/message')}}"><span class="nav-icon material-icons ">color_lens</span>
-                        List Message </a>
+                            class="nav-icon material-icons">dashboard</span> Home</a></li>
+                <li class="{{ Request::is('admin/user') ? 'active' : '' }}" title="Daftar User"><a href="{{url('/admin/user')}}"><span class="nav-icon material-icons ">people</span>
+                        User </a>
                 </li>
-                <li class="{{ Request::is('admin/chat/with') ? 'active' : '' }}"><a href="{{url('/admin/chat/with')}}" title="Layout Options"><span class="nav-icon material-icons">dashboard</span> Chat<span class="toogle-sub-nav material-icons">keyboard_arrow_right</span></a>
-                    <ul class="sub-nav">
-                        <li><a href="{{url('/admin/chat/with')}}" title="Top Navigation">Kemal</a></li>
-                        <li><a href="{{url('/admin/chat/with')}}" title="Fixed Layout">Muhammad</a></li>
-                        <li><a href="{{url('/admin/chat/with')}}" title="Compact Menu">Galang</a></li>
-                    </ul>
+                <li class="{{ Request::is('admin/message') ? 'active' : '' }}" title="Pesan"><a href="{{url('/admin/message')}}"><span class="nav-icon material-icons ">message</span>
+                        Message </a>
                 </li>
             </ul>
         </nav>
