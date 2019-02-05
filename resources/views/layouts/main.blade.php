@@ -317,6 +317,7 @@
 
 <script src="{{ url('js/panel/pages/dashboard.script.js')}}"></script>
 
+@yield('script')
 
 </body>
 </html>
