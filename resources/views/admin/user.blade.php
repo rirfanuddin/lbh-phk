@@ -77,9 +77,9 @@
 
 
     <nav aria-label="Page navigation example">
-        <form class="form-inline float-left" action="#" method="POST">
+        <form class="form-inline float-left" action="{{ $url_pagination }}" method="POST">
             {{ csrf_field() }}
-            <label class="my-1 mr-2 d-none d-md-block" for="show-data">Showing 10 out of {{ $total }}</label>
+            <label class="my-1 mr-2 d-none d-md-block" for="show-data">Menampilkan {{ $current_from+1 }} sampai {{ $current_from + $current_to }} dari {{ $total }} data</label>
             <select class="form-control" id="show-data" name="perpage" onchange="this.form.submit();">
                 <option value="10" {{ $per_page == 10 ? "selected":"" }}>10</option>
                 <option value="25" {{ $per_page == 25 ? "selected":"" }}>25</option>
@@ -93,16 +93,16 @@
             </li>
             @for($i=1; $i <= $last_page; $i++)
                 @if($i == 1)
-                    <li class="page-item {{ $page == $i ? "active":"" }}"><a class="page-link" href="{{url('/admin/user/'.$i)}}">{{ $i }}</a></li>
+                    <li class="page-item {{ $page == $i ? "active":"" }}"><a class="page-link" href="{{url('/admin/user/?page='.$i.'&perpage='.$per_page)}}">{{ $i }}</a></li>
                 @elseif(($current_page + 1) == $i || ($current_page - 1) == $i || ($current_page) == $i)
-                    <li class="page-item {{ $page == $i ? "active":"" }}"><a class="page-link" href="{{url('/admin/user/'.$i)}}">{{ $i }}</a></li>
+                    <li class="page-item {{ $page == $i ? "active":"" }}"><a class="page-link" href="{{url('/admin/user/?page='.$i.'&perpage='.$per_page)}}">{{ $i }}</a></li>
                     @if($dot == 1)
                         @php
                             $dot -= 1;
                         @endphp
                     @endif
                 @elseif($i == $last_page)
-                    <li class="page-item {{ $page == $i ? "active":"" }}"><a class="page-link" href="{{url('/admin/user/'.$i)}}">{{ $i }}</a></li>
+                    <li class="page-item {{ $page == $i ? "active":"" }}"><a class="page-link" href="{{url('/admin/user/?page='.$i.'&perpage='.$per_page)}}">{{ $i }}</a></li>
                 @else
                     @if($dot == 0)
                         <li class="page-item {{ $page == $i ? "active":"" }}"><a class="page-link" href="{{url('/admin/user/#')}}">...</a></li>
