@@ -4,7 +4,7 @@
     <div class="row page-tilte align-items-center">
         <div class="col-md-auto">
             <a href="#" class="mt-3 d-md-none float-right toggle-controls"><span class="material-icons">keyboard_arrow_down</span></a>
-            <h1 class="weight-300 h3 title">Chat With</h1>
+            <h1 class="weight-300 h3 title">{{ $user->name }}</h1>
             <p class="text-muted m-0 desc">Let's get a quick overview</p>
         </div>
     </div>
@@ -76,21 +76,21 @@
                                     </li>
                                 </ul>
 
-                                <div>
-                                    <hr class="dashed">
+                            </div>
+
+                            <div>
+                                <hr class="dashed">
+                            </div>
+
+                            <div class="media align-items-center">
+
+                                <a href="#" class="material-icons md-18 text-muted mr-2">attach_file</a>
+                                <a href="#" class="material-icons md-18 text-muted mr-3">tag_faces</a>
+                                <div class="media-body">
+                                    <input type="text" name="" class="form-control border-0"
+                                           placeholder="Reply Message">
                                 </div>
-
-                                <div class="media align-items-center">
-
-                                    <a href="#" class="material-icons md-18 text-muted mr-2">attach_file</a>
-                                    <a href="#" class="material-icons md-18 text-muted mr-3">tag_faces</a>
-                                    <div class="media-body">
-                                        <input type="text" name="" class="form-control border-0"
-                                               placeholder="Reply Message">
-                                    </div>
-                                    <button class="btn btn-primary btn-sm">Send Message</button>
-
-                                </div>
+                                <button class="btn btn-primary btn-sm">Send Message</button>
 
                             </div>
 

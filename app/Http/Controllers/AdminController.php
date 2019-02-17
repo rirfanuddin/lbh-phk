@@ -101,7 +101,4 @@ class AdminController extends Controller
         return view('admin.message');
     }
 
-    public function chat(){
-        return view('admin.chat');
-    }
 }

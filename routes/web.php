@@ -32,5 +32,9 @@ Route::group(['prefix' => 'admin', 'middleware' => 'admin'], function(){
     Route::post('user', 'AdminController@getListUser')->name('admin.user.changeshowperpage');
 
     Route::get('message', 'AdminController@message')->name('admin.message');
-    Route::get('chat/{id}', 'AdminController@chatWith')->name('admin.chat');
+
+    Route::get('chat/{id}', 'ChatController@show')->name('admin.chat');
+    Route::post('/chat/getChat/{id}', 'ChatController@getChat');
+    Route::post('/chat/sendChat', 'ChatController@sendChat');
+
 });
