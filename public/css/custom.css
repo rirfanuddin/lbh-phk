@@ -1,0 +1,6 @@
+.custom-scroll{
+    /* border: 2px black solid; */
+    overflow: auto;
+    height: 300px;
+    padding: 10px;
+}

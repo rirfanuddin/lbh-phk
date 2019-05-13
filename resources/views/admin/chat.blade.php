@@ -18,66 +18,66 @@
                     <div class="tab-content" id="myTabContent">
                         <div class="tab-pane fade show active" id="messgaes" role="tabpanel"
                              aria-labelledby="messgaes-tab">
+                            <div class="custom-scroll">
+                                <div class="d-flex flex-column">
 
-                            <div class="d-flex flex-column">
+                                    <ul class="messgaes flex-fill mb-4">
 
-                                <ul class="messgaes flex-fill mb-4">
+                                        <li class="media">
+                                            <div class="mr-4"><img src="{{ url('img/panel/avtar4.png')}}"
+                                                                    class="user-thumb"></div>
+                                            <div class="media-body messgae-bubble bg-warning-light25 ">
+                                                <h6 class="mt-0 weight-400">kevin Dossey</h6>
+                                                <small class="text-muted weight-300"> Cras sit amet nibh libero, in
+                                                    gravida nulla. Nulla vel metus scelerisque ante sollicitudin.
+                                                    Cras purus odio, vestibulum in vulputate at, tempus viverra
+                                                    turpis. Fusce condimentum nunc ac.
+                                                </small>
+                                            </div>
+                                        </li>
+                                        <li class="media flex-row-reverse">
+                                            <div class="ml-4"><img src="{{ url('img/panel/avtar3.png')}}"
+                                                                    class="user-thumb"></div>
+                                            <div class="media-body from-you messgae-bubble bg-light ">
+                                                <h6 class="mt-0 weight-400">kevin Dossey</h6>
+                                                <small class="text-muted weight-300">Fusce condimentum nunc ac nisi
+                                                    vulputate fringilla.
+                                                </small>
+                                            </div>
+                                        </li>
 
-                                    <li class="media">
-                                        <div class="mr-4"><img src="{{ url('img/panel/avtar4.png')}}"
-                                                               class="user-thumb"></div>
-                                        <div class="media-body messgae-bubble bg-warning-light25 ">
-                                            <h6 class="mt-0 weight-400">kevin Dossey</h6>
-                                            <small class="text-muted weight-300"> Cras sit amet nibh libero, in
-                                                gravida nulla. Nulla vel metus scelerisque ante sollicitudin.
-                                                Cras purus odio, vestibulum in vulputate at, tempus viverra
-                                                turpis. Fusce condimentum nunc ac.
-                                            </small>
-                                        </div>
-                                    </li>
-                                    <li class="media flex-row-reverse">
-                                        <div class="ml-4"><img src="{{ url('img/panel/avtar3.png')}}"
-                                                               class="user-thumb"></div>
-                                        <div class="media-body from-you messgae-bubble bg-light ">
-                                            <h6 class="mt-0 weight-400">kevin Dossey</h6>
-                                            <small class="text-muted weight-300">Fusce condimentum nunc ac nisi
-                                                vulputate fringilla.
-                                            </small>
-                                        </div>
-                                    </li>
+                                        <li class="media">
+                                            <div class="mr-4"><img src="{{ url('img/panel/avtar1.png')}}"
+                                                                    class="user-thumb"></div>
+                                            <div class="media-body messgae-bubble bg-warning-light25 ">
+                                                <h6 class="mt-0 weight-400">kevin Dossey</h6>
+                                                <small class="text-muted weight-300"> Sure. and Thanks !</small>
+                                            </div>
+                                        </li>
+                                        <li class="media">
+                                            <div class="mr-4"><img src="{{ url('img/panel/avtar4.png')}}"
+                                                                    class="user-thumb"></div>
+                                            <div class="media-body messgae-bubble bg-warning-light25 ">
+                                                <h6 class="mt-0 weight-400">kevin Dossey</h6>
+                                                <small class="text-muted weight-300"> Cras sit amet nibh libero, in
+                                                    gravida nulla. Nulla vel metus scelerisque ante sollicitudin.
+                                                </small>
+                                            </div>
+                                        </li>
+                                        <li class="media flex-row-reverse">
+                                            <div class="ml-4"><img src="{{ url('img/panel/avtar3.png')}}"
+                                                                    class="user-thumb"></div>
+                                            <div class="media-body from-you messgae-bubble bg-light ">
+                                                <h6 class="mt-0 weight-400">kevin Dossey</h6>
+                                                <small class="text-muted weight-300">Cras purus odio, vestibulum in
+                                                    vulputate at, tempus viverra turpis.
+                                                </small>
+                                            </div>
+                                        </li>
+                                    </ul>
 
-                                    <li class="media">
-                                        <div class="mr-4"><img src="{{ url('img/panel/avtar1.png')}}"
-                                                               class="user-thumb"></div>
-                                        <div class="media-body messgae-bubble bg-warning-light25 ">
-                                            <h6 class="mt-0 weight-400">kevin Dossey</h6>
-                                            <small class="text-muted weight-300"> Sure. and Thanks !</small>
-                                        </div>
-                                    </li>
-                                    <li class="media">
-                                        <div class="mr-4"><img src="{{ url('img/panel/avtar4.png')}}"
-                                                               class="user-thumb"></div>
-                                        <div class="media-body messgae-bubble bg-warning-light25 ">
-                                            <h6 class="mt-0 weight-400">kevin Dossey</h6>
-                                            <small class="text-muted weight-300"> Cras sit amet nibh libero, in
-                                                gravida nulla. Nulla vel metus scelerisque ante sollicitudin.
-                                            </small>
-                                        </div>
-                                    </li>
-                                    <li class="media flex-row-reverse">
-                                        <div class="ml-4"><img src="{{ url('img/panel/avtar3.png')}}"
-                                                               class="user-thumb"></div>
-                                        <div class="media-body from-you messgae-bubble bg-light ">
-                                            <h6 class="mt-0 weight-400">kevin Dossey</h6>
-                                            <small class="text-muted weight-300">Cras purus odio, vestibulum in
-                                                vulputate at, tempus viverra turpis.
-                                            </small>
-                                        </div>
-                                    </li>
-                                </ul>
-
+                                </div>
                             </div>
-
                             <div>
                                 <hr class="dashed">
                             </div>
