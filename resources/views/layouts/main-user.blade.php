@@ -22,6 +22,9 @@
     <!-- Full Calendar Icons -->
     <link href="{{ url('css/panel/fullcalendar/fullcalendar.css')}}" rel="stylesheet">
 
+    <!-- Custom CSS -->
+    <link href="{{ url('css/custom.css')}}" rel="stylesheet">
+
     <title>User LBH Payung Hitam Keadilan</title>
 
 </head>
