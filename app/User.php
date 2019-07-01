@@ -27,4 +27,15 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+    
+    public function users(){
+        $users = App\User::where('is_admin', 0)->get();
+        return $users;
+    }
+
+    public function admin(){
+        $admin = App\User::where('is_admin', 1)->get();
+        return $admin;
+    }
+
 }

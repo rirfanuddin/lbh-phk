@@ -4,6 +4,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="adminId" content="{{ Auth::check() ? Auth::user()->id : 'null' }}">
 
     <link rel="icon" href="{{ url('img/panel/favicon.ico')}}">
 
@@ -32,7 +33,7 @@
 <body>
 
 <!-- Pre Loader-->
-<div class="loader-wrapper">
+<div id="app" class="loader-wrapper">
     <div class="spinner">
         <svg viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
             <circle class="length" fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="28"></circle>
@@ -161,7 +162,7 @@
 
 
         <div class="content-wrapper">
-
+        
             @yield('content')
 
 

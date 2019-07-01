@@ -1,6 +1,6 @@
 @extends('layouts.main')
 
-@section('content')
+<!-- @section('content')
     <div class="row page-tilte align-items-center">
         <div class="col-md-auto">
             <a href="#" class="mt-3 d-md-none float-right toggle-controls"><span class="material-icons">keyboard_arrow_down</span></a>
@@ -170,4 +170,26 @@
             </li>
         </ul>
     </nav>
+@endsection -->
+
+@section('content')
+    <div class="container">
+        <div class="column is-8 is-offset-2">
+            <div class="panel">
+                <div class="panel-heading">
+                    List of all Users
+                </div>
+                @forelse ($users as $user)
+                    <a href="{{ route('chat.show', $user->id) }}" class="panel-block" style="justify-content: space-between;">
+                        <div>{{ $user->name }}</div>
+                        <onlineuser v-bind:user="{{ $user }}" v-bind:onlineusers="onlineUsers"></onlineuser>
+                    </a>
+                @empty
+                    <div class="panel-block">
+                        No User Found
+                    </div>
+                @endforelse
+            </div>
+        </div>
+    </div>
 @endsection

@@ -98,7 +98,11 @@ class AdminController extends Controller
     }
 
     public function message(){
-        return view('admin.message');
+        $users = Auth::user()->users();
+        $data = array(
+            'users' => $users
+        );
+        return view('admin.message')->with($data);
     }
 
 }
